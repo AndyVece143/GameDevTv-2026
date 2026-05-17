@@ -5,7 +5,7 @@ public class Player : MonoBehaviour
     public float speed;
     private Rigidbody2D body;
     public BoxCollider2D boxCollider;
-
+    public Animator anim;
     public enum State
     {
         Standard,
@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+        anim = GetComponent<Animator>();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -54,5 +55,13 @@ public class Player : MonoBehaviour
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
+
+        anim.SetBool("move", horizontalInput != 0 || verticalInput != 0);
+    }
+
+    public void StopMoving(int react)
+    {
+        body.linearVelocity = new Vector2(0, 0);
+        anim.SetInteger("react", react);
     }
 }
