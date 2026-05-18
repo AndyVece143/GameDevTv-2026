@@ -64,6 +64,13 @@ public class Player : MonoBehaviour
     public void StopMoving(int react)
     {
         body.linearVelocity = new Vector2(0, 0);
+        state = State.NoMove;
         anim.SetInteger("react", react);
+    }
+
+    public void StartMoving()
+    {
+        state = State.Standard;
+        anim.SetInteger("react", 0);
     }
 }
