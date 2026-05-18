@@ -1,0 +1,97 @@
+using System.Collections;
+using UnityEngine;
+
+public class NPC : MonoBehaviour
+{
+    public GameManager manager;
+    public BigDialogue greeting;
+    public BigDialogue winGame;
+    public BigDialogue postGame;
+
+    public int dialogueState = 0;
+    public Player player;
+    public BoxCollider2D boxCollider;
+    public bool interactable;
+    public string gameName;
+    public bool talker0;
+    public bool talker1;
+    public bool talker2;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        player = Player.FindAnyObjectByType<Player>();
+        boxCollider = GetComponent<BoxCollider2D>();
+        interactable = true;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (boxCollider.IsTouching(player.boxCollider))
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                if (player.state != Player.State.NoMove)
+                {
+                    //interactable = false;
+                    player.StopMoving(1);
+                    player.state = Player.State.NoMove;
+
+                    switch (dialogueState)
+                    {
+                        case 0:
+                            BigDialogue newBigDialogue = Instantiate(greeting);
+                            newBigDialogue.transitionToGame = true;
+                            newBigDialogue.npcGamer = this;
+                            if (talker0)
+                            {
+                                newBigDialogue.character1.isActiveSpeaker = true;
+                            }
+                            else
+                            {
+                                newBigDialogue.character2.isActiveSpeaker = true;
+                            }
+                            break;
+                        case 1:
+                            BigDialogue postBigDialogue = Instantiate(postGame);
+                            if (talker2)
+                            {
+                                postBigDialogue.character1.isActiveSpeaker = true;
+                            }
+                            else
+                            {
+                                postBigDialogue.character2.isActiveSpeaker = true;
+                            }
+                            break;
+                    }
+                }
+            }
+        }
+    }
+
+    public void GoToGame()
+    {
+        switch (gameName)
+        {
+            case "Test Game":
+                StartCoroutine(manager.TestGameTime());
+                break;
+        }
+    }
+
+    public IEnumerator WinGameDialogue()
+    {
+        yield return new WaitForSeconds(2.5f);
+        dialogueState++;
+        BigDialogue winDialogue = Instantiate(winGame);
+        if (talker0)
+        {
+            winDialogue.character1.isActiveSpeaker = true;
+        }
+        else
+        {
+            winDialogue.character2.isActiveSpeaker = true;
+        }
+    }
+}

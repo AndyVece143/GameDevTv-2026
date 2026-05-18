@@ -1,28 +1,24 @@
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class TGPlayer : MonoBehaviour
 {
     public float speed;
     private Rigidbody2D body;
     public BoxCollider2D boxCollider;
-    public Animator anim;
+    
     public enum State
     {
         Standard,
-        NoMove,
+        NoMove
     }
     public State state;
 
-    private void Awake()
-    {
-        body = GetComponent<Rigidbody2D>();
-        boxCollider = GetComponent<BoxCollider2D>();
-        anim = GetComponent<Animator>();
-    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        body = GetComponent<Rigidbody2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -40,30 +36,15 @@ public class Player : MonoBehaviour
 
     private void Movement()
     {
-        anim.SetInteger("react", 0);
-
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
         body.linearVelocity = new Vector2(horizontalInput * speed, verticalInput * speed);
-
-        //Flip Sprite
-        if (horizontalInput > 0.01f)
-        {
-            transform.localScale = Vector3.one;
-        }
-
-        else if (horizontalInput < -0.01f)
-        {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
-
-        anim.SetBool("move", horizontalInput != 0 || verticalInput != 0);
     }
 
-    public void StopMoving(int react)
+    public void StopMoving()
     {
         body.linearVelocity = new Vector2(0, 0);
-        anim.SetInteger("react", react);
+        state = State.NoMove;
     }
 }

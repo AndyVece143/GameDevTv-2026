@@ -39,6 +39,11 @@ public class BigDialogue : MonoBehaviour
 
     private const string HTML_ALPHA = "<color=#00000000>";
     public bool ready = false;
+    public Player player;
+
+    public bool transitionToGame;
+    public NPC npcGamer;
+    public bool letPlayerWalk;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -48,6 +53,7 @@ public class BigDialogue : MonoBehaviour
         mainText.text = string.Empty;
         //nameText.text = string.Empty;
         nameText.text = names[0];
+        player = Player.FindAnyObjectByType<Player>();
 
         BeginningSprite();
         SetPositions();
@@ -253,7 +259,14 @@ public class BigDialogue : MonoBehaviour
         //{
         //    loader.LoadNextLevel(sceneName);
         //}
-
+        if (transitionToGame == true)
+        {
+            npcGamer.GoToGame();
+        }
+        if (letPlayerWalk)
+        {
+            player.state = Player.State.Standard;
+        }
         Destroy(gameObject);
     }
 }
