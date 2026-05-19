@@ -16,6 +16,7 @@ public class NPC : MonoBehaviour
     public bool talker0;
     public bool talker1;
     public bool talker2;
+    public bool checker = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -37,6 +38,7 @@ public class NPC : MonoBehaviour
                     //interactable = false;
                     player.StopMoving(1);
                     player.state = Player.State.NoMove;
+                    player.talkIcon.enabled = false;
 
                     switch (dialogueState)
                     {
@@ -63,6 +65,7 @@ public class NPC : MonoBehaviour
                             {
                                 postBigDialogue.character2.isActiveSpeaker = true;
                             }
+                            checker = true;
                             break;
                     }
                 }

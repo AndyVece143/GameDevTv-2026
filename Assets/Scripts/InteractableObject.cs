@@ -10,6 +10,7 @@ public class InteractableObject : MonoBehaviour
     public BoxCollider2D boxCollider;
     public int react;
     public CameraController mainCamera;
+    public bool checker = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,12 +29,14 @@ public class InteractableObject : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && interactable == true)
             {
                 interactable = false;
+                player.inspectIcon.enabled = false;
                 mainCamera.state = CameraController.State.StayStill;
                 player.StopMoving(react);
 
                 InspectBox newInspectBox = Instantiate(inspectBox);
                 newInspectBox.lines = dialogue;
                 newInspectBox.interactableObject = this;
+                checker = true;
             }
         }
     }

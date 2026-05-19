@@ -13,11 +13,16 @@ public class Player : MonoBehaviour
     }
     public State state;
 
+    public SpriteRenderer inspectIcon;
+    public SpriteRenderer talkIcon;
+
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
+        inspectIcon.enabled = false;
+        talkIcon.enabled = false;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -36,6 +41,7 @@ public class Player : MonoBehaviour
             case State.NoMove:
                 break;
         }
+        InspectIcon();
     }
 
     private void Movement()
@@ -72,5 +78,62 @@ public class Player : MonoBehaviour
     {
         state = State.Standard;
         anim.SetInteger("react", 0);
+    }
+
+    private void InspectIcon()
+    {
+        if (transform.localScale.x == 1)
+        {
+            inspectIcon.transform.localScale = Vector3.one;
+        }
+
+        if (transform.localScale.x == -1)
+        {
+            inspectIcon.transform.localScale = new Vector3(-1, 1, 1);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Inspect" && state != State.NoMove)
+        {
+            inspectIcon.enabled = true;
+
+            if (collision.gameObject.GetComponent<InteractableObject>().checker == false)
+            {
+                inspectIcon.color = Color.white;
+            }
+            else
+            {
+                inspectIcon.color = Color.gray;
+            }
+        }
+
+        if (collision.gameObject.tag == "NPC" && state != State.NoMove)
+        {
+            talkIcon.enabled = true;
+
+            if (collision.gameObject.GetComponent<NPC>().checker == false)
+            {
+                talkIcon.color = Color.white;
+            }
+            else
+            {
+                talkIcon.color = Color.gray;
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Inspect")
+        {
+            inspectIcon.enabled = false;
+        }
+
+        if (collision.gameObject.tag == "NPC")
+        {
+            talkIcon.enabled = false;
+        }
     }
 }
