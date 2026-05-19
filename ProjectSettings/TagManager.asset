@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Inspect
   - NPC
+  - Coin
+  - MazePlayer
   layers:
   - Default
   - TransparentFX

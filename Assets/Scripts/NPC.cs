@@ -80,6 +80,9 @@ public class NPC : MonoBehaviour
             case "Test Game":
                 StartCoroutine(manager.TestGameTime());
                 break;
+            case "Maze Game":
+                StartCoroutine(manager.MazeGameTime());
+                break;
         }
     }
 

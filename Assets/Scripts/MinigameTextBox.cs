@@ -9,6 +9,7 @@ public class MinigameTextBox : MonoBehaviour
     public GameObject textBox;
     private Vector3 textBoxPosition;
     private Vector3 textBoxEndPosition;
+    public float distance;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -34,19 +35,19 @@ public class MinigameTextBox : MonoBehaviour
         switch (i)
         {
             case 0:
-                textBox.transform.position = new Vector3(textBox.transform.position.x + 15f, textBox.transform.position.y, textBox.transform.position.z);
+                textBox.transform.position = new Vector3(textBox.transform.position.x + distance, textBox.transform.position.y, textBox.transform.position.z);
                 break;
 
             case 1:
-                textBox.transform.position = new Vector3(textBox.transform.position.x - 15f, textBox.transform.position.y, textBox.transform.position.z);
+                textBox.transform.position = new Vector3(textBox.transform.position.x - distance, textBox.transform.position.y, textBox.transform.position.z);
                 break;
 
             case 2:
-                textBox.transform.position = new Vector3(textBox.transform.position.x, textBox.transform.position.y + 10f, textBox.transform.position.z);
+                textBox.transform.position = new Vector3(textBox.transform.position.x, textBox.transform.position.y + distance, textBox.transform.position.z);
                 break;
 
             case 3:
-                textBox.transform.position = new Vector3(textBox.transform.position.x, textBox.transform.position.y - 10f, textBox.transform.position.z);
+                textBox.transform.position = new Vector3(textBox.transform.position.x, textBox.transform.position.y - distance, textBox.transform.position.z);
                 break;
         }
         textBoxEndPosition = textBox.transform.position;
