@@ -8,6 +8,8 @@ TagManager:
   - NPC
   - Coin
   - MazePlayer
+  - Apple
+  - Drop Off
   layers:
   - Default
   - TransparentFX

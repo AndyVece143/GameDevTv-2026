@@ -17,6 +17,7 @@ public class NPC : MonoBehaviour
     public bool talker1;
     public bool talker2;
     public bool checker = false;
+    public string npcName;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -83,6 +84,9 @@ public class NPC : MonoBehaviour
             case "Maze Game":
                 StartCoroutine(manager.MazeGameTime());
                 break;
+            case "Apple Game":
+                StartCoroutine(manager.AppleGameTime());
+                break;
         }
     }
 
@@ -98,6 +102,16 @@ public class NPC : MonoBehaviour
         else
         {
             winDialogue.character2.isActiveSpeaker = true;
+        }
+
+        switch (npcName)
+        {
+            case "Terance":
+                manager.teranceFriendship++;
+                break;
+            case "Yuri":
+                manager.yuriFriendship++;
+                break;
         }
     }
 }

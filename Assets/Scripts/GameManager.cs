@@ -7,7 +7,8 @@ public class GameManager : MonoBehaviour
     {
         Overworld,
         MazeGame,
-        TestGame
+        TestGame,
+        AppleGame,
     }
     public State state;
     public Player player;
@@ -17,8 +18,13 @@ public class GameManager : MonoBehaviour
     public FadeToBlack fadeToBlack;
     public MazeGame mazeGame;
     public GameObject mazeGameUI;
+    public AppleGame appleGame;
+    public GameObject appleGameUI;
     public int dayNumber;
     public int teranceFriendship;
+    public int meemawFriendship;
+    public int yuriFriendship;
+    public int smartsFriendship;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -55,12 +61,24 @@ public class GameManager : MonoBehaviour
         StartCoroutine(mazeGame.StartGame());
     }
 
+    public IEnumerator AppleGameTime()
+    {
+        fadeToBlack.BecomeTrans();
+        yield return new WaitForSeconds(1.1f);
+        appleGameUI.SetActive(true);
+        mainCamera.state = CameraController.State.StayStill;
+        mainCamera.transform.position = new Vector3(appleGame.transform.position.x, appleGame.transform.position.y, -10);
+        state = State.AppleGame;
+        StartCoroutine(appleGame.StartGame());
+    }
+
     public IEnumerator BackToMainGame()
     {
         fadeToBlack.BecomeTrans();
         yield return new WaitForSeconds(1.1f);
         mainCamera.GetComponent<Camera>().orthographicSize = 5f;
         mazeGameUI.SetActive(false);
+        appleGameUI.SetActive(false);
         mainCamera.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10);
         mainCamera.state = CameraController.State.FollowPlayer;
     }
