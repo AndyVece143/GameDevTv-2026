@@ -44,6 +44,7 @@ public class BigDialogue : MonoBehaviour
     public bool transitionToGame;
     public NPC npcGamer;
     public bool letPlayerWalk;
+    private bool ending = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -70,7 +71,7 @@ public class BigDialogue : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.L) && ending == false)
         {
             StartCoroutine(MoveSpritesEnd());
         }
@@ -251,6 +252,7 @@ public class BigDialogue : MonoBehaviour
 
     IEnumerator MoveSpritesEnd()
     {
+        ending = true;
         float time = 0;
         while (time < moveDuration)
         {

@@ -10,6 +10,9 @@ TagManager:
   - MazePlayer
   - Apple
   - Drop Off
+  - A
+  - B
+  - C
   layers:
   - Default
   - TransparentFX

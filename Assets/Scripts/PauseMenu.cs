@@ -4,6 +4,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject blackUI;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,6 +31,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
+        blackUI.SetActive(false);
         Time.timeScale = 1f;
         gameIsPaused = false;
     }
@@ -37,6 +39,7 @@ public class PauseMenu : MonoBehaviour
     public void Pause()
     {
         pauseMenuUI.SetActive(true);
+        blackUI.SetActive(true);
         Time.timeScale = 0f;
         gameIsPaused = true;
     }

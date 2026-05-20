@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
         MazeGame,
         TestGame,
         AppleGame,
+        QuizGame,
     }
     public State state;
     public Player player;
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
     public GameObject mazeGameUI;
     public AppleGame appleGame;
     public GameObject appleGameUI;
+    public QuizGame quizGame1;
     public int dayNumber;
     public int teranceFriendship;
     public int meemawFriendship;
@@ -70,6 +72,16 @@ public class GameManager : MonoBehaviour
         mainCamera.transform.position = new Vector3(appleGame.transform.position.x, appleGame.transform.position.y, -10);
         state = State.AppleGame;
         StartCoroutine(appleGame.StartGame());
+    }
+
+    public IEnumerator QuizGame1Time()
+    {
+        fadeToBlack.BecomeTrans();
+        yield return new WaitForSeconds(1.1f);
+        mainCamera.state = CameraController.State.StayStill;
+        mainCamera.transform.position = new Vector3(quizGame1.transform.position.x, quizGame1.transform.position.y, -10);
+        state = State.QuizGame;
+        StartCoroutine(quizGame1.StartGame());
     }
 
     public IEnumerator BackToMainGame()

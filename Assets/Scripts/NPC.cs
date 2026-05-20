@@ -87,6 +87,9 @@ public class NPC : MonoBehaviour
             case "Apple Game":
                 StartCoroutine(manager.AppleGameTime());
                 break;
+            case "Quiz Game 1":
+                StartCoroutine(manager.QuizGame1Time());
+                break;
         }
     }
 
@@ -111,6 +114,9 @@ public class NPC : MonoBehaviour
                 break;
             case "Yuri":
                 manager.yuriFriendship++;
+                break;
+            case "Sophia":
+                manager.smartsFriendship++;
                 break;
         }
     }

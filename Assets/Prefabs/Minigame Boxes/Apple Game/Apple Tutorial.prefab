@@ -255,7 +255,7 @@ MonoBehaviour:
   canvas: {fileID: 7562153759723588007}
   duration: 1
   textBox: {fileID: 5530788735803512643}
-  distance: 45
+  distance: 15
 --- !u!1 &4050018386768296197
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,11 +321,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Navigate the maze to find three coins and get to the exit!
+  m_text: 'Catch the apples and drop them off!
 
 
-    WASD/Arrow
-    Keys to move!'
+    WASD/Arrow Keys to move!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 58297205ba0866947b1acfb1a96cebd5, type: 2}
   m_sharedMaterial: {fileID: -5779227735952464890, guid: 58297205ba0866947b1acfb1a96cebd5, type: 2}
