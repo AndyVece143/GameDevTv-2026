@@ -69,6 +69,11 @@ public class BigDialogue : MonoBehaviour
                 NextLine();
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            StartCoroutine(MoveSpritesEnd());
+        }
     }
 
     void StartDialogue()

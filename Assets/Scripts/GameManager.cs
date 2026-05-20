@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public FadeToBlack fadeToBlack;
     public MazeGame mazeGame;
     public GameObject mazeGameUI;
+    public int dayNumber;
+    public int teranceFriendship;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

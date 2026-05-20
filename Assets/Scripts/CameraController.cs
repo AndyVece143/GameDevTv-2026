@@ -15,6 +15,8 @@ public class CameraController : MonoBehaviour
     }
     public State state;
 
+    public GameManager manager;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,13 +39,21 @@ public class CameraController : MonoBehaviour
     private void FollowPlayer()
     {
         Vector3 targetPosition = player.position + offset;
-        if (targetPosition.y < 0)
+        targetPosition.y = 0;
+
+        switch (manager.dayNumber)
         {
-            targetPosition.y = 0;
-        }
-        if (targetPosition.y > 0)
-        {
-            targetPosition.y = 0;
+            case 0:
+                if (targetPosition.x < 0)
+                {
+                    targetPosition.x = 0;
+                }
+
+                if (targetPosition.x > 42)
+                {
+                    targetPosition.x = 42;
+                }
+                break;
         }
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
     }
