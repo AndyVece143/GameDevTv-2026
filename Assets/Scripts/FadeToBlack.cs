@@ -8,4 +8,9 @@ public class FadeToBlack : MonoBehaviour
     {
         anim.Play("trans");
     }
+
+    public void BecomeTransFast()
+    {
+        anim.Play("transfast");
+    }
 }

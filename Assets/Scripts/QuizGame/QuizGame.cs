@@ -52,6 +52,8 @@ public class QuizGame : MonoBehaviour
     public MinigameTextBox incorrectBox;
     private bool showText = false;
 
+    public FadeToBlack fadeToBlack;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -96,6 +98,8 @@ public class QuizGame : MonoBehaviour
             player.StopMoving();
 
             yield return new WaitForSeconds(5);
+            fadeToBlack.BecomeTransFast();
+            yield return new WaitForSeconds(0.5f);
             
             player.transform.position = new Vector3(respawn.position.x, respawn.position.y, respawn.position.z);
             player.state = QuizPlayer.State.Standard;
@@ -116,6 +120,8 @@ public class QuizGame : MonoBehaviour
             Debug.Log("WRONG!!!");
             player.StopMoving();
             yield return new WaitForSeconds(5);
+            fadeToBlack.BecomeTransFast();
+            yield return new WaitForSeconds(0.5f);
             player.transform.position = new Vector3(respawn.position.x, respawn.position.y, respawn.position.z);
             player.state = QuizPlayer.State.Standard;
         }
