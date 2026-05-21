@@ -45,6 +45,7 @@ public class BigDialogue : MonoBehaviour
     public NPC npcGamer;
     public bool letPlayerWalk;
     private bool ending = false;
+    public CameraController mainCamera;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -52,6 +53,7 @@ public class BigDialogue : MonoBehaviour
         canvas = GetComponent<Canvas>();
         canvas.worldCamera = Camera.main;
         mainText.text = string.Empty;
+        mainCamera = CameraController.FindAnyObjectByType<CameraController>();
         //nameText.text = string.Empty;
         nameText.text = names[0];
         player = Player.FindAnyObjectByType<Player>();
@@ -273,6 +275,7 @@ public class BigDialogue : MonoBehaviour
         if (letPlayerWalk)
         {
             player.state = Player.State.Standard;
+            mainCamera.state = CameraController.State.FollowPlayer;
         }
         Destroy(gameObject);
     }

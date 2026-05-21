@@ -13,6 +13,9 @@ TagManager:
   - A
   - B
   - C
+  - Car
+  - KillCar
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

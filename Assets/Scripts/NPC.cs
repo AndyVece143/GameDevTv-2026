@@ -18,12 +18,14 @@ public class NPC : MonoBehaviour
     public bool talker2;
     public bool checker = false;
     public string npcName;
+    public CameraController mainCamera;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         player = Player.FindAnyObjectByType<Player>();
         boxCollider = GetComponent<BoxCollider2D>();
+        mainCamera = CameraController.FindAnyObjectByType<CameraController>();
         interactable = true;
     }
 
@@ -40,6 +42,7 @@ public class NPC : MonoBehaviour
                     player.StopMoving(1);
                     player.state = Player.State.NoMove;
                     player.talkIcon.enabled = false;
+                    mainCamera.state = CameraController.State.StayStill;
 
                     switch (dialogueState)
                     {
@@ -90,6 +93,9 @@ public class NPC : MonoBehaviour
             case "Quiz Game 1":
                 StartCoroutine(manager.QuizGame1Time());
                 break;
+            case "Road Game 1":
+                StartCoroutine(manager.RoadGame1Time());
+                break;
         }
     }
 
@@ -117,6 +123,9 @@ public class NPC : MonoBehaviour
                 break;
             case "Sophia":
                 manager.smartsFriendship++;
+                break;
+            case "Meemaw":
+                manager.meemawFriendship++;
                 break;
         }
     }

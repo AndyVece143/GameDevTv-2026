@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7a7d0d8004a6a5d49af3092bb42aeb08
+guid: fd9ee064ee6fb7745ab2b9141b21cc10
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8652184937237092265
-    second: crossyroad_0
+      213: -3669854035456941534
+    second: carorange_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: crossyroad_0
+      name: carorange_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1649
-        height: 323
+        width: 49
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7586ffc04a34de780800000000000000
-      internalID: -8652184937237092265
+      spriteID: 2222e0fc23f021dc0800000000000000
+      internalID: -3669854035456941534
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      crossyroad_0: -8652184937237092265
+      carorange_0: -3669854035456941534
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

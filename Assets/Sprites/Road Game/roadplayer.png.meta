@@ -1,0 +1,480 @@
+fileFormatVersion: 2
+guid: 713ba0d3b542f8e4fbd21fdef6214925
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6863331067644803457
+    second: roadplayer_0
+  - first:
+      213: -5830660852671494068
+    second: roadplayer_1
+  - first:
+      213: -5828362608527499104
+    second: roadplayer_2
+  - first:
+      213: 2787780732913675428
+    second: roadplayer_3
+  - first:
+      213: 1945428392711118672
+    second: roadplayer_4
+  - first:
+      213: -6969677242923784456
+    second: roadplayer_5
+  - first:
+      213: -1651392481524636477
+    second: roadplayer_6
+  - first:
+      213: -5902326063742193852
+    second: roadplayer_7
+  - first:
+      213: 2853111485076226484
+    second: roadplayer_8
+  - first:
+      213: -8358714195979404485
+    second: roadplayer_9
+  - first:
+      213: -6810107782866763775
+    second: roadplayer_10
+  - first:
+      213: 3717262973455524692
+    second: roadplayer_11
+  - first:
+      213: 372985854000359369
+    second: roadplayer_12
+  - first:
+      213: -3538563858617079905
+    second: roadplayer_13
+  - first:
+      213: -5425444008884431606
+    second: roadplayer_14
+  - first:
+      213: 9115042286353781835
+    second: roadplayer_15
+  - first:
+      213: -8847097530056636905
+    second: roadplayer_16
+  - first:
+      213: -5662255156442069023
+    second: roadplayer_17
+  - first:
+      213: -5586462364671779667
+    second: roadplayer_18
+  - first:
+      213: 4602033774196264758
+    second: roadplayer_19
+  - first:
+      213: -3096753443629011485
+    second: roadplayer_20
+  - first:
+      213: -1742121870285835315
+    second: roadplayer_21
+  - first:
+      213: 5601929555982112301
+    second: roadplayer_22
+  - first:
+      213: 2545537076567635614
+    second: roadplayer_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 30
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: roadplayer_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 115
+        width: 59
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f760129e1cc80c0a0800000000000000
+      internalID: -6863331067644803457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roadplayer_1
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 115
+        width: 59
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c484dbeb8d4551fa0800000000000000
+      internalID: -5830660852671494068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roadplayer_2
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 115
+        width: 59
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a0ac88661f7d1fa0800000000000000
+      internalID: -5828362608527499104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roadplayer_3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 77
+        width: 59
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ac6ff86ecf20b620800000000000000
+      internalID: 2787780732913675428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roadplayer_4
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 77
+        width: 59
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05f518bd0dc8ffa10800000000000000
+      internalID: 1945428392711118672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roadplayer_5
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 77
+        width: 59
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f66768797bb64f90800000000000000
+      internalID: -6969677242923784456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roadplayer_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 39
+        width: 59
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c429f999431519e0800000000000000
+      internalID: -1651392481524636477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roadplayer_7
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 39
+        width: 59
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44fed1687b9b61ea0800000000000000
+      internalID: -5902326063742193852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roadplayer_8
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 39
+        width: 59
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b14e8c77c9489720800000000000000
+      internalID: 2853111485076226484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roadplayer_9
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 59
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3bf1a1a9b1effb80800000000000000
+      internalID: -8358714195979404485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roadplayer_10
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 1
+        width: 59
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1008a109d03ad71a0800000000000000
+      internalID: -6810107782866763775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roadplayer_11
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 1
+        width: 59
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 453678dbafe569330800000000000000
+      internalID: 3717262973455524692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 22cd1ffcc90e67b4abefca95884bfc74
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":59.0,"y":37.0},"gridSpriteOffset":{"x":1.0,"y":1.0},"gridSpritePadding":{"x":1.0,"y":1.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      roadplayer_0: -6863331067644803457
+      roadplayer_1: -5830660852671494068
+      roadplayer_10: -6810107782866763775
+      roadplayer_11: 3717262973455524692
+      roadplayer_2: -5828362608527499104
+      roadplayer_3: 2787780732913675428
+      roadplayer_4: 1945428392711118672
+      roadplayer_5: -6969677242923784456
+      roadplayer_6: -1651392481524636477
+      roadplayer_7: -5902326063742193852
+      roadplayer_8: 2853111485076226484
+      roadplayer_9: -8358714195979404485
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
