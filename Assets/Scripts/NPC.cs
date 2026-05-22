@@ -107,7 +107,7 @@ public class NPC : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
         dialogueState++;
         BigDialogue winDialogue = Instantiate(winGame);
-        if (talker0)
+        if (talker1)
         {
             winDialogue.character1.isActiveSpeaker = true;
         }
@@ -121,7 +121,7 @@ public class NPC : MonoBehaviour
             case "Terance":
                 manager.teranceFriendship++;
                 break;
-            case "Yuri":
+            case "Annabelle":
                 manager.yuriFriendship++;
                 break;
             case "Sophia":

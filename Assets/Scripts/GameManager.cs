@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     public int meemawFriendship;
     public int yuriFriendship;
     public int smartsFriendship;
+    public MusicPlayer music;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -65,6 +66,7 @@ public class GameManager : MonoBehaviour
         mainCamera.GetComponent<Camera>().orthographicSize = 15f;
         state = State.MazeGame;
         StartCoroutine(mazeGame.StartGame());
+        music.SwitchSong("Gamer");
     }
 
     public IEnumerator AppleGameTime()
@@ -76,6 +78,7 @@ public class GameManager : MonoBehaviour
         mainCamera.transform.position = new Vector3(appleGame.transform.position.x, appleGame.transform.position.y, -10);
         state = State.AppleGame;
         StartCoroutine(appleGame.StartGame());
+        music.SwitchSong("Outdoor");
     }
 
     public IEnumerator QuizGame1Time()
@@ -86,6 +89,7 @@ public class GameManager : MonoBehaviour
         mainCamera.transform.position = new Vector3(quizGame1.transform.position.x, quizGame1.transform.position.y, -10);
         state = State.QuizGame;
         StartCoroutine(quizGame1.StartGame());
+        music.SwitchSong("Quiz");
     }
 
     public IEnumerator RoadGame1Time()
@@ -96,6 +100,7 @@ public class GameManager : MonoBehaviour
         mainCamera.transform.position = new Vector3(roadGame1.transform.position.x, roadGame1.transform.position.y, -10);
         state = State.RoadGame;
         StartCoroutine(roadGame1.StartGame());
+        music.SwitchSong("Road");
     }
 
     public IEnumerator FlowerGameTime()
@@ -107,6 +112,7 @@ public class GameManager : MonoBehaviour
         mainCamera.transform.position = new Vector3(flowerGame.transform.position.x, flowerGame.transform.position.y, -10);
         state = State.AppleGame;
         StartCoroutine(flowerGame.StartGame());
+        music.SwitchSong("Outdoor");
     }
 
     public IEnumerator BackToMainGame()
@@ -119,5 +125,6 @@ public class GameManager : MonoBehaviour
         flowerGameUI.SetActive(false);
         mainCamera.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10);
         mainCamera.state = CameraController.State.FollowPlayer;
+        music.SwitchSong("Park");
     }
 }

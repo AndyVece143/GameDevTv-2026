@@ -4204,15 +4204,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   manager: {fileID: 952243884}
-  greeting: {fileID: 7037971510064651253, guid: 70e686c6d09ecc547987176ae115753b, type: 3}
-  winGame: {fileID: 7037971510064651253, guid: 2d96c52c9d05bd14bb346d5ed307f5ef, type: 3}
-  postGame: {fileID: 7037971510064651253, guid: 4d463e29653e2e446966bd07fd633a26, type: 3}
+  greeting: {fileID: 7037971510064651253, guid: a826737635297c8499382619ad536cfb, type: 3}
+  winGame: {fileID: 7037971510064651253, guid: eac478b3bd3d31849a020c601dc807c9, type: 3}
+  postGame: {fileID: 7037971510064651253, guid: 32d6a0728b726be4f9830e01b2c94cf3, type: 3}
   dialogueState: 0
   player: {fileID: 1940484107}
   boxCollider: {fileID: 474646989}
   interactable: 0
   gameName: Road Game 1
-  talker0: 0
+  talker0: 1
   talker1: 0
   talker2: 0
   checker: 0
@@ -5604,16 +5604,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   manager: {fileID: 952243884}
-  greeting: {fileID: 7037971510064651253, guid: 70e686c6d09ecc547987176ae115753b, type: 3}
-  winGame: {fileID: 7037971510064651253, guid: 2d96c52c9d05bd14bb346d5ed307f5ef, type: 3}
-  postGame: {fileID: 7037971510064651253, guid: 4d463e29653e2e446966bd07fd633a26, type: 3}
+  greeting: {fileID: 7037971510064651253, guid: f60c82d9b27f92349b7b0fbd6356f97d, type: 3}
+  winGame: {fileID: 7037971510064651253, guid: b08ace2729df56d48966132ce1439895, type: 3}
+  postGame: {fileID: 7037971510064651253, guid: 944119161a0f6604a967e6f2f8afee95, type: 3}
   dialogueState: 0
   player: {fileID: 0}
   boxCollider: {fileID: 0}
   interactable: 0
   gameName: Quiz Game 1
   talker0: 0
-  talker1: 0
+  talker1: 1
   talker2: 0
   checker: 0
   npcName: Sophia
@@ -8565,6 +8565,7 @@ MonoBehaviour:
   meemawFriendship: 0
   yuriFriendship: 0
   smartsFriendship: 0
+  music: {fileID: 1830558044}
 --- !u!4 &952243885
 Transform:
   m_ObjectHideFlags: 0
@@ -10175,7 +10176,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -770.0201, y: 437.81}
+  m_AnchoredPosition: {x: -770.02, y: 437.81}
   m_SizeDelta: {x: -1540.05, y: -875.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1129720504
@@ -11852,7 +11853,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -770.0201, y: 437.81}
+  m_AnchoredPosition: {x: -770.02, y: 437.81}
   m_SizeDelta: {x: -1540.05, y: -875.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1331150225
@@ -33951,6 +33952,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1830558043}
   - component: {fileID: 1830558042}
+  - component: {fileID: 1830558044}
   m_Layer: 0
   m_Name: Music Player
   m_TagString: Untagged
@@ -34070,6 +34072,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1830558044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830558041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a309eae779cc94744b8c74f768e94124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicPlayer
+  source: {fileID: 1830558042}
+  parkTheme: {fileID: 8300000, guid: a552994616ba94a428f6cd31cb5cd9a2, type: 3}
+  gamerTheme: {fileID: 8300000, guid: c55a0ca359475d740a5e6dcd20bb5b3e, type: 3}
+  outdoorTheme: {fileID: 8300000, guid: b6ea1b51db986e24585dd496d9999d77, type: 3}
+  quizTheme: {fileID: 8300000, guid: d9d336d128df78f4e85862dae75c2696, type: 3}
+  roadTheme: {fileID: 8300000, guid: 03a19fb655f9c314ba87bc973c6f97c1, type: 3}
 --- !u!1 &1833022545
 GameObject:
   m_ObjectHideFlags: 0
@@ -37776,19 +37796,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   manager: {fileID: 952243884}
-  greeting: {fileID: 7037971510064651253, guid: 70e686c6d09ecc547987176ae115753b, type: 3}
-  winGame: {fileID: 7037971510064651253, guid: 2d96c52c9d05bd14bb346d5ed307f5ef, type: 3}
-  postGame: {fileID: 7037971510064651253, guid: 4d463e29653e2e446966bd07fd633a26, type: 3}
+  greeting: {fileID: 7037971510064651253, guid: 59ec546a93f17524793f0c4233cec839, type: 3}
+  winGame: {fileID: 7037971510064651253, guid: 112d1a8f11dff0a4d9fd40c4f12547b9, type: 3}
+  postGame: {fileID: 7037971510064651253, guid: b58d87f132a42ea4f84ac20a0c2eb6ae, type: 3}
   dialogueState: 0
   player: {fileID: 0}
   boxCollider: {fileID: 0}
   interactable: 0
   gameName: Apple Game
-  talker0: 0
-  talker1: 0
+  talker0: 1
+  talker1: 1
   talker2: 0
   checker: 0
-  npcName: Yuri
+  npcName: Annabelle
   mainCamera: {fileID: 0}
 --- !u!61 &2121849085
 BoxCollider2D:

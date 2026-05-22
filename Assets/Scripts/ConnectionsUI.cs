@@ -77,7 +77,7 @@ public class ConnectionsUI : MonoBehaviour
         }
         else
         {
-            yuriIcon.nameText.text = "Yuri";
+            yuriIcon.nameText.text = "Annabelle";
             yuriIcon.image.sprite = yuriImage;
             yuriIcon.image.preserveAspect = true;
             yuriIcon.descriptionText.text = "A very pretty lady who enjoys nature. I hope we can spend more time together.";
