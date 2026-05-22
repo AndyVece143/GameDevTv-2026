@@ -45,6 +45,13 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public IEnumerator ControlPlayerAgain()
+    {
+        mainCamera.state = CameraController.State.FollowPlayer;
+        yield return new WaitForSeconds(3);
+        player.StartMoving();
+    }
+
     public IEnumerator TestGameTime()
     {
         fadeToBlack.BecomeTrans();

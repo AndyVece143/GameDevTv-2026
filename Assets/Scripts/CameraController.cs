@@ -59,6 +59,18 @@ public class CameraController : MonoBehaviour
                     targetPosition.x = 42;
                 }
                 break;
+
+            case 1:
+                if (targetPosition.x < 70)
+                {
+                    targetPosition.x = 70;
+                }
+
+                if (targetPosition.x > 112)
+                {
+                    targetPosition.x = 112;
+                }
+                break;
         }
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
     }

@@ -135,7 +135,11 @@ public class InspectBox : MonoBehaviour
             textBox.transform.position = Vector3.Lerp(textBox.transform.position, textBoxEndPosition, time / duration);
             yield return null;
         }
-        interactableObject.interactable = true;
+        if (interactableObject)
+        {
+            interactableObject.interactable = true;
+        }
+
         player.StartMoving();
         mainCamera.state = CameraController.State.FollowPlayer;
         Destroy(gameObject);

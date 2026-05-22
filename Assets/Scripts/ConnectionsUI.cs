@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class ConnectionsUI : MonoBehaviour
@@ -13,6 +14,7 @@ public class ConnectionsUI : MonoBehaviour
     public Sprite yuriImage;
     public Sprite smartsImage;
     public Sprite meemawImage;
+    public TextMeshProUGUI objectiveText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,6 +29,7 @@ public class ConnectionsUI : MonoBehaviour
         Meemaw();
         Yuri();
         Smarts();
+        Objective();
     }
 
     private void Terance()
@@ -100,6 +103,22 @@ public class ConnectionsUI : MonoBehaviour
             smartsIcon.image.preserveAspect = true;
             smartsIcon.descriptionText.text = "A young girl who is enrolled in a private school. She needs help learning some subjects.";
         }
+    }
 
+    private void Objective()
+    {
+        switch (manager.dayNumber)
+        {
+            case 0:
+                if (manager.yuriFriendship == 1 && manager.teranceFriendship == 1 && manager.meemawFriendship == 1 && manager.smartsFriendship == 1)
+                {
+                    objectiveText.text = "You've met everyone. Time to go home for the day.";
+                }
+                else
+                {
+                    objectiveText.text = "Look around and meet new people.";
+                }
+                break;
+        }
     }
 }
