@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     public GameObject appleGameUI;
     public QuizGame quizGame1;
     public RoadGame roadGame1;
+    public FlowerGame flowerGame;
+    public GameObject flowerGameUI;
     public int dayNumber;
     public int teranceFriendship;
     public int meemawFriendship;
@@ -96,6 +98,17 @@ public class GameManager : MonoBehaviour
         StartCoroutine(roadGame1.StartGame());
     }
 
+    public IEnumerator FlowerGameTime()
+    {
+        fadeToBlack.BecomeTrans();
+        yield return new WaitForSeconds(1.1f);
+        mainCamera.state = CameraController.State.StayStill;
+        flowerGameUI.SetActive(true);
+        mainCamera.transform.position = new Vector3(flowerGame.transform.position.x, flowerGame.transform.position.y, -10);
+        state = State.AppleGame;
+        StartCoroutine(flowerGame.StartGame());
+    }
+
     public IEnumerator BackToMainGame()
     {
         fadeToBlack.BecomeTrans();
@@ -103,6 +116,7 @@ public class GameManager : MonoBehaviour
         mainCamera.GetComponent<Camera>().orthographicSize = 5f;
         mazeGameUI.SetActive(false);
         appleGameUI.SetActive(false);
+        flowerGameUI.SetActive(false);
         mainCamera.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10);
         mainCamera.state = CameraController.State.FollowPlayer;
     }

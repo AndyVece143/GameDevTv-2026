@@ -96,6 +96,9 @@ public class NPC : MonoBehaviour
             case "Road Game 1":
                 StartCoroutine(manager.RoadGame1Time());
                 break;
+            case "Flower Game":
+                StartCoroutine(manager.FlowerGameTime());
+                break;
         }
     }
 

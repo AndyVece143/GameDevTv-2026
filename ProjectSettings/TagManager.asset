@@ -16,11 +16,13 @@ TagManager:
   - Car
   - KillCar
   - Checkpoint
+  - Refill
+  - Plant
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - GroundLayer
   - Water
   - UI
   - 
