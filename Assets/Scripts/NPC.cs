@@ -99,6 +99,9 @@ public class NPC : MonoBehaviour
             case "Flower Game":
                 StartCoroutine(manager.FlowerGameTime());
                 break;
+            case "Platformer Game":
+                StartCoroutine(manager.PlatformerGameTime());
+                break;
         }
     }
 

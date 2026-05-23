@@ -18,6 +18,8 @@ TagManager:
   - Checkpoint
   - Refill
   - Plant
+  - Enemy
+  - PlatformerPlayer
   layers:
   - Default
   - TransparentFX
@@ -25,8 +27,8 @@ TagManager:
   - GroundLayer
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - Enemy
   - 
   - 
   - 

@@ -7,12 +7,14 @@ public class CameraController : MonoBehaviour
     private Vector3 offset = new Vector3(0f, 0f, -10f);
     private float smoothTime = 0.15f;
     private Vector3 velocity = Vector3.zero;
+    public PlatformerPlayer platformerPlayer;
 
     public enum State
     {
         FollowPlayer,
         StayStill,
         RoadGame1,
+        Platformer,
     }
     public State state;
 
@@ -37,6 +39,9 @@ public class CameraController : MonoBehaviour
                 break;
             case State.RoadGame1:
                 FollowRoad1();
+                break;
+            case State.Platformer:
+                FollowPlatformer();
                 break;
         }
     }
@@ -89,6 +94,12 @@ public class CameraController : MonoBehaviour
         {
             targetPosition.x = 58.55f;
         }
+        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+    }
+
+    private void FollowPlatformer()
+    {
+        Vector3 targetPosition = platformerPlayer.transform.position + offset;
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
     }
 

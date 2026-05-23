@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     public RoadGame roadGame1;
     public FlowerGame flowerGame;
     public GameObject flowerGameUI;
+    public PlatformerGame platformerGame;
+    public GameObject platformerGameUI;
     public int dayNumber;
     public int teranceFriendship;
     public int meemawFriendship;
@@ -122,6 +124,16 @@ public class GameManager : MonoBehaviour
         music.SwitchSong("Outdoor");
     }
 
+    public IEnumerator PlatformerGameTime()
+    {
+        fadeToBlack.BecomeTrans();
+        yield return new WaitForSeconds(1.1f);
+        mainCamera.state = CameraController.State.Platformer;
+        platformerGameUI.SetActive(true);
+        StartCoroutine(platformerGame.StartGame());
+        music.SwitchSong("Gamer");
+    }
+
     public IEnumerator BackToMainGame()
     {
         fadeToBlack.BecomeTrans();
@@ -130,6 +142,7 @@ public class GameManager : MonoBehaviour
         mazeGameUI.SetActive(false);
         appleGameUI.SetActive(false);
         flowerGameUI.SetActive(false);
+        platformerGameUI.SetActive(false);
         mainCamera.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10);
         mainCamera.state = CameraController.State.FollowPlayer;
         music.SwitchSong("Park");

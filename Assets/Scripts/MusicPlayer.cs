@@ -8,6 +8,7 @@ public class MusicPlayer : MonoBehaviour
     public AudioClip outdoorTheme;
     public AudioClip quizTheme;
     public AudioClip roadTheme;
+    public AudioClip yuriTheme;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -41,6 +42,9 @@ public class MusicPlayer : MonoBehaviour
                 break;
             case "Road":
                 source.clip = roadTheme;
+                break;
+            case "Yuri":
+                source.clip = yuriTheme;
                 break;
         }
         source.Play();
