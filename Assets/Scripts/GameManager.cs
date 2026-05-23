@@ -28,6 +28,10 @@ public class GameManager : MonoBehaviour
     public GameObject flowerGameUI;
     public PlatformerGame platformerGame;
     public GameObject platformerGameUI;
+    public QuizGame quizGame2;
+    public QuizGame quizGame3;
+    public RoadGame roadGame2;
+    public RoadGame roadGame3;
     public int dayNumber;
     public int teranceFriendship;
     public int meemawFriendship;
@@ -132,6 +136,50 @@ public class GameManager : MonoBehaviour
         platformerGameUI.SetActive(true);
         StartCoroutine(platformerGame.StartGame());
         music.SwitchSong("Gamer");
+    }
+
+    public IEnumerator QuizGame2Time()
+    {
+        fadeToBlack.BecomeTrans();
+        yield return new WaitForSeconds(1.1f);
+        mainCamera.state = CameraController.State.StayStill;
+        mainCamera.transform.position = new Vector3(quizGame2.transform.position.x, quizGame2.transform.position.y, -10);
+        state = State.QuizGame;
+        StartCoroutine(quizGame2.StartGame());
+        music.SwitchSong("Quiz");
+    }
+
+    public IEnumerator QuizGame3Time()
+    {
+        fadeToBlack.BecomeTrans();
+        yield return new WaitForSeconds(1.1f);
+        mainCamera.state = CameraController.State.StayStill;
+        mainCamera.transform.position = new Vector3(quizGame3.transform.position.x, quizGame3.transform.position.y, -10);
+        state = State.QuizGame;
+        StartCoroutine(quizGame3.StartGame());
+        music.SwitchSong("Quiz");
+    }
+
+    public IEnumerator RoadGame2Time()
+    {
+        fadeToBlack.BecomeTrans();
+        yield return new WaitForSeconds(1.1f);
+        mainCamera.state = CameraController.State.RoadGame2;
+        mainCamera.transform.position = new Vector3(roadGame2.transform.position.x, roadGame2.transform.position.y, -10);
+        state = State.RoadGame;
+        StartCoroutine(roadGame2.StartGame());
+        music.SwitchSong("Road");
+    }
+
+    public IEnumerator RoadGame3Time()
+    {
+        fadeToBlack.BecomeTrans();
+        yield return new WaitForSeconds(1.1f);
+        mainCamera.state = CameraController.State.RoadGame3;
+        mainCamera.transform.position = new Vector3(roadGame3.transform.position.x, roadGame3.transform.position.y, -10);
+        state = State.RoadGame;
+        StartCoroutine(roadGame3.StartGame());
+        music.SwitchSong("Road");
     }
 
     public IEnumerator BackToMainGame()

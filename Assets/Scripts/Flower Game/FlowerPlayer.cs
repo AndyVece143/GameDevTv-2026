@@ -45,6 +45,7 @@ public class FlowerPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        anim.SetBool("grounded", true);
         switch (state)
         {
             case State.Standard:

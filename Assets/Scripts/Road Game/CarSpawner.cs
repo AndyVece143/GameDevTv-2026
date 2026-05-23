@@ -7,6 +7,7 @@ public class CarSpawner : MonoBehaviour
     public float maxTime;
     public float timer;
     public RoadGame game;
+    public float speed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -30,6 +31,7 @@ public class CarSpawner : MonoBehaviour
     {
         Car newCar = Instantiate(car);
         newCar.transform.position = transform.position;
+        newCar.speed = speed;
         timer = Random.Range(minTime, maxTime);
     }
 }

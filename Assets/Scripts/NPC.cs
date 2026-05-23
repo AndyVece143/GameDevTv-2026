@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -101,6 +102,18 @@ public class NPC : MonoBehaviour
                 break;
             case "Platformer Game":
                 StartCoroutine(manager.PlatformerGameTime());
+                break;
+            case "Quiz Game 2":
+                StartCoroutine(manager.QuizGame2Time());
+                break;
+            case "Quiz Game 3":
+                StartCoroutine(manager.QuizGame3Time());
+                break;
+            case "Road Game 2":
+                StartCoroutine(manager.RoadGame2Time());
+                break;
+            case "Road Game 3":
+                StartCoroutine(manager.RoadGame3Time());
                 break;
         }
     }

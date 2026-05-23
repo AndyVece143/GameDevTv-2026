@@ -14,12 +14,16 @@ public class CameraController : MonoBehaviour
         FollowPlayer,
         StayStill,
         RoadGame1,
+        RoadGame2,
+        RoadGame3,
         Platformer,
     }
     public State state;
 
     public GameManager manager;
     public RoadGame roadGame1;
+    public RoadGame roadGame2;
+    public RoadGame roadGame3;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -42,6 +46,12 @@ public class CameraController : MonoBehaviour
                 break;
             case State.Platformer:
                 FollowPlatformer();
+                break;
+            case State.RoadGame2:
+                FollowRoad2();
+                break;
+            case State.RoadGame3:
+                FollowRoad3();
                 break;
         }
     }
@@ -84,6 +94,40 @@ public class CameraController : MonoBehaviour
     {
         Vector3 targetPosition = roadGame1.player.transform.position + offset;
         targetPosition.y = roadGame1.transform.position.y;
+
+        if (targetPosition.x < 21.45f)
+        {
+            targetPosition.x = 21.45f;
+        }
+
+        if (targetPosition.x > 58.55f)
+        {
+            targetPosition.x = 58.55f;
+        }
+        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+    }
+
+    private void FollowRoad2()
+    {
+        Vector3 targetPosition = roadGame2.player.transform.position + offset;
+        targetPosition.y = roadGame2.transform.position.y;
+
+        if (targetPosition.x < 21.45f)
+        {
+            targetPosition.x = 21.45f;
+        }
+
+        if (targetPosition.x > 58.55f)
+        {
+            targetPosition.x = 58.55f;
+        }
+        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+    }
+
+    private void FollowRoad3()
+    {
+        Vector3 targetPosition = roadGame3.player.transform.position + offset;
+        targetPosition.y = roadGame3.transform.position.y;
 
         if (targetPosition.x < 21.45f)
         {
