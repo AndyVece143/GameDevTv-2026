@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     public QuizGame quizGame3;
     public RoadGame roadGame2;
     public RoadGame roadGame3;
+    public YuriGame yuriGame;
     public int dayNumber;
     public int teranceFriendship;
     public int meemawFriendship;
@@ -180,6 +181,16 @@ public class GameManager : MonoBehaviour
         state = State.RoadGame;
         StartCoroutine(roadGame3.StartGame());
         music.SwitchSong("Road");
+    }
+
+    public IEnumerator YuriGameTime()
+    {
+        fadeToBlack.BecomeTrans();
+        yield return new WaitForSeconds(1.1f);
+        mainCamera.state = CameraController.State.StayStill;
+        mainCamera.transform.position = new Vector3(yuriGame.transform.position.x, yuriGame.transform.position.y, -10);
+        StartCoroutine(yuriGame.StartGame());
+        music.SwitchSong("Yuri");
     }
 
     public IEnumerator BackToMainGame()

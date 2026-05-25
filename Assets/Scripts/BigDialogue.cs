@@ -46,6 +46,8 @@ public class BigDialogue : MonoBehaviour
     public bool letPlayerWalk;
     private bool ending = false;
     public CameraController mainCamera;
+    public bool yuri;
+    public YuriGame yuriGame;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -57,6 +59,10 @@ public class BigDialogue : MonoBehaviour
         //nameText.text = string.Empty;
         nameText.text = names[0];
         player = Player.FindAnyObjectByType<Player>();
+        if (yuri)
+        {
+            yuriGame = YuriGame.FindAnyObjectByType<YuriGame>();
+        }
 
         BeginningSprite();
         SetPositions();
@@ -277,6 +283,12 @@ public class BigDialogue : MonoBehaviour
             player.state = Player.State.Standard;
             mainCamera.state = CameraController.State.FollowPlayer;
         }
+
+        if (yuri)
+        {
+            yuriGame.DoTransition();
+        }
+
         Destroy(gameObject);
     }
 }

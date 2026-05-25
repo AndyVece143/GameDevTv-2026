@@ -115,6 +115,12 @@ public class NPC : MonoBehaviour
             case "Road Game 3":
                 StartCoroutine(manager.RoadGame3Time());
                 break;
+            case "Developer":
+                dialogueState++;
+                break;
+            case "Yuri Game":
+                StartCoroutine(manager.YuriGameTime());
+                break;
         }
     }
 
