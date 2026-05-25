@@ -563,7 +563,7 @@ MonoBehaviour:
   lines:
   - I'm gonna send all the apples we got to a local restaurant. I can take care of
     that myself.
-  - I'll be seeing you later, cutey.
+  - I'll be seeing you later, cutie!
   - R-Right!
   - (Gah, my heart flutters everytime you call me that!)
   textSpeed: 0.01
@@ -589,6 +589,10 @@ MonoBehaviour:
   npcGamer: {fileID: 0}
   letPlayerWalk: 1
   mainCamera: {fileID: 0}
+  yuri: 0
+  yuriGame: {fileID: 0}
+  epilogue: 0
+  epilogueManager: {fileID: 0}
 --- !u!1 &7173677601962066936
 GameObject:
   m_ObjectHideFlags: 0

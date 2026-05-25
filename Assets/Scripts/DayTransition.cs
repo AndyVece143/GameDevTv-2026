@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DayTransition : MonoBehaviour
@@ -12,6 +13,7 @@ public class DayTransition : MonoBehaviour
     public int friendshipValue;
     public Transform nextDaySpawn;
     public CameraController mainCamera;
+    public LevelLoader loader;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,10 +28,22 @@ public class DayTransition : MonoBehaviour
         {
             if (manager.dayNumber == friendshipValue - 1 && manager.yuriFriendship == friendshipValue && manager.teranceFriendship == friendshipValue && manager.meemawFriendship == friendshipValue && manager.smartsFriendship == friendshipValue)
             {
-                transition = true;
-                StartCoroutine(CoolTransition());
+                if (manager.dayNumber == 2)
+                {
+                    EndTheGame();
+                }
+                else
+                {
+                    transition = true;
+                    StartCoroutine(CoolTransition());
+                }
             }
         }
+    }
+
+    private void EndTheGame()
+    {
+        loader.LoadNextLevel("Epilogue");
     }
 
     private IEnumerator CoolTransition()

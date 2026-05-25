@@ -9,8 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/BasicReading.unity
     guid: 1896fe8296480924d88f5a7ea0468870
   - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: 62b7b036d63afe94f993ee50b5deeab5
+  - enabled: 1
+    path: Assets/Scenes/Prologue.unity
+    guid: 56cb61a436ad814409f60ce0c700a4ab
+  - enabled: 1
     path: Assets/Scenes/MainGame.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Epilogue.unity
+    guid: 451d7e41c36e250458cc1b391ced3198
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

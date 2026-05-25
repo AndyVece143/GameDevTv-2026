@@ -17,7 +17,7 @@ public class BasicReading : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && transition == false)
         {
             transition = true;
-            loader.LoadNextLevel("MainGame");
+            loader.LoadNextLevel("Title");
         }
     }
 }

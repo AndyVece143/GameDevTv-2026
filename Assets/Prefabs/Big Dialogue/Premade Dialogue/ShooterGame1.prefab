@@ -561,7 +561,7 @@ MonoBehaviour:
   mainText: {fileID: 543059519439015131}
   nameText: {fileID: 418096978935973156}
   lines:
-  - (There's Little Terance agaon, playing his games. He looks happier today.)
+  - (There's little Terance agaon, playing his games. He looks happier today.)
   - Hey there, Terance! How goes it?
   - Hey Naomi! I'm doing well! Just playing games.
   - I can see that. So, did anyone give you any trouble today?
@@ -574,7 +574,7 @@ MonoBehaviour:
   - Hehe, anytime, little buddy.
   - Hey, do you want to take a turn at this game? I don't need any help today, but
     as thanks, I figure you could play for a bit.
-  - Sure, I'll take you up on that offer. WHat's the game this time?
+  - Sure, I'll take you up on that offer. What's the game this time?
   - It's a space shooter. You just gotta take down the big boss.
   - You got it. Time to game on!
   textSpeed: 0.01
@@ -611,6 +611,8 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   yuri: 0
   yuriGame: {fileID: 0}
+  epilogue: 0
+  epilogueManager: {fileID: 0}
 --- !u!1 &7173677601962066936
 GameObject:
   m_ObjectHideFlags: 0

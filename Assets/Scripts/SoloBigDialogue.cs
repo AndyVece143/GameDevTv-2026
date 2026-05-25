@@ -34,6 +34,9 @@ public class SoloBigDialogue : MonoBehaviour
     private bool ending = false;
     public int nextDay;
     public DayTransitionUI dayUI;
+    public bool dayTrans;
+    public bool prologue;
+    public PrologueManager prologueManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -43,7 +46,15 @@ public class SoloBigDialogue : MonoBehaviour
         mainText.text = string.Empty;
         mainCamera = CameraController.FindAnyObjectByType<CameraController>();
         nameText.text = "Naomi";
-        dayUI = DayTransitionUI.FindAnyObjectByType<DayTransitionUI>();
+        if (dayTrans)
+        {
+            dayUI = DayTransitionUI.FindAnyObjectByType<DayTransitionUI>();
+        }
+
+        if (prologue)
+        {
+            prologueManager = PrologueManager.FindAnyObjectByType<PrologueManager>();
+        }
 
         BeginningSprite();
         SetPositions();
@@ -170,7 +181,16 @@ public class SoloBigDialogue : MonoBehaviour
 
 
         //gameUI.SetActive(true);
-        StartCoroutine(dayUI.SwitchDays(nextDay));
+        if (dayTrans)
+        {
+            StartCoroutine(dayUI.SwitchDays(nextDay));
+        }
+
+        if (prologue)
+        {
+            prologueManager.GoToNextScene();
+        }
+
 
         Destroy(gameObject);
         //player.state = Player.State.Standard;

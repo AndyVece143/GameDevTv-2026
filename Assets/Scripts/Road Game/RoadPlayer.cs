@@ -3,7 +3,7 @@ using UnityEngine;
 public class RoadPlayer : MonoBehaviour
 {
     public float speed;
-    private Rigidbody2D body;
+    public Rigidbody2D body;
     public BoxCollider2D boxCollider;
 
     public enum State
@@ -106,7 +106,7 @@ public class RoadPlayer : MonoBehaviour
             StartCoroutine(game.RespawnPlayer());
         }
 
-        if (collision.tag == "Checkpoint")
+        if (collision.tag == "Checkpoint" && state != State.Hurt)
         {
             game.respawnPoint = collision.transform;
         }

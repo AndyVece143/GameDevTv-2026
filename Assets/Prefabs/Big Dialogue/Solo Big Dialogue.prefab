@@ -466,6 +466,7 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: e625aa98a09c0ec49a626d485678953f, type: 3}
   nextDay: 0
   dayUI: {fileID: 0}
+  dayTrans: 1
 --- !u!1 &7173677601962066936
 GameObject:
   m_ObjectHideFlags: 0

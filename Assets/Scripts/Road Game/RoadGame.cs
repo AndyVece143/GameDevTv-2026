@@ -25,7 +25,7 @@ public class RoadGame : MonoBehaviour
     void Start()
     {
         state = State.NotPlaying;
-        respawnPoint = player.transform;
+        //respawnPoint = player.transform;
         mainCamera = CameraController.FindAnyObjectByType<CameraController>();
     }
 
@@ -40,6 +40,7 @@ public class RoadGame : MonoBehaviour
             case State.NotPlaying:
                 break;
         }
+        //Debug.Log(respawnPoint.position);
     }
 
     private void Playing()
@@ -58,6 +59,7 @@ public class RoadGame : MonoBehaviour
         fadeToBlack.BecomeTransFast();
         yield return new WaitForSeconds(0.5f);
         player.transform.position = respawnPoint.position;
+        player.body.linearVelocity = new Vector2(0, 0);
         player.transform.rotation = new Quaternion(0, 0, 0, 0);
         player.state = RoadPlayer.State.Standard;
 
@@ -65,6 +67,12 @@ public class RoadGame : MonoBehaviour
         {
             case 1:
                 mainCamera.state = CameraController.State.RoadGame1;
+                break;
+            case 2:
+                mainCamera.state = CameraController.State.RoadGame2;
+                break;
+            case 3:
+                mainCamera.state = CameraController.State.RoadGame3;
                 break;
         }
     }

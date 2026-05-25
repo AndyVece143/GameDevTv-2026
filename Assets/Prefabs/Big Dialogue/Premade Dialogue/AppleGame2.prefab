@@ -578,7 +578,7 @@ MonoBehaviour:
   - You seem like a lovely person, and I would love to continue spending time with
     you.
   - I would really like that!
-  - Then it's settled. I'll be seeing you later, cutey!
+  - Then it's settled. I'll be seeing you later, cutie!
   - A-Alright!
   - '(What''s with her? She''s so direct with the compliments.) '
   - (Maybe that's just her way of being nice.)
@@ -618,6 +618,10 @@ MonoBehaviour:
   npcGamer: {fileID: 0}
   letPlayerWalk: 1
   mainCamera: {fileID: 0}
+  yuri: 0
+  yuriGame: {fileID: 0}
+  epilogue: 0
+  epilogueManager: {fileID: 0}
 --- !u!1 &7173677601962066936
 GameObject:
   m_ObjectHideFlags: 0

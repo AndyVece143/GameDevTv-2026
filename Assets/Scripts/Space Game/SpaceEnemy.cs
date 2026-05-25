@@ -20,11 +20,14 @@ public class SpaceEnemy : MonoBehaviour
     public SpaceLaser laser;
     public AudioClip shootSound;
     public AudioClip explosion;
+    public float speed;
+    public Rigidbody2D body;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
+        body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         state = State.NoMove;
     }
@@ -48,6 +51,8 @@ public class SpaceEnemy : MonoBehaviour
 
     private void Movement()
     {
+        body.linearVelocity = new Vector2(0, speed);
+
         timer -= Time.deltaTime;
         if (timer <= 0)
         {
@@ -89,5 +94,13 @@ public class SpaceEnemy : MonoBehaviour
         //SpaceLaser newLaser = Instantiate(laser, shootPlace.position, Quaternion.Euler(new Vector3(0, 0, angle + 180)));
 
         SpaceLaser newLaser = Instantiate(laser, shootPlace.position, rotation);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Wall" && state != State.Dead)
+        {
+            speed = -speed;
+        }
     }
 }

@@ -48,6 +48,8 @@ public class BigDialogue : MonoBehaviour
     public CameraController mainCamera;
     public bool yuri;
     public YuriGame yuriGame;
+    public bool epilogue;
+    public PrologueManager epilogueManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -62,6 +64,11 @@ public class BigDialogue : MonoBehaviour
         if (yuri)
         {
             yuriGame = YuriGame.FindAnyObjectByType<YuriGame>();
+        }
+
+        if (epilogue)
+        {
+            epilogueManager = PrologueManager.FindAnyObjectByType<PrologueManager>();
         }
 
         BeginningSprite();
@@ -287,6 +294,11 @@ public class BigDialogue : MonoBehaviour
         if (yuri)
         {
             yuriGame.DoTransition();
+        }
+
+        if (epilogue)
+        {
+            epilogueManager.GoToNextScene();
         }
 
         Destroy(gameObject);

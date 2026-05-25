@@ -12,6 +12,7 @@ public class DayTransitionUI : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        StartCoroutine(SwitchDays(-1));
     }
 
     // Update is called once per frame
@@ -38,6 +39,10 @@ public class DayTransitionUI : MonoBehaviour
             case 1:
                 dayText.text = "Day 2";
                 dayText2.text = "Day 3";
+                break;
+            case -1:
+                dayText.text = "";
+                dayText2.text = "Day 1";
                 break;
 
         }

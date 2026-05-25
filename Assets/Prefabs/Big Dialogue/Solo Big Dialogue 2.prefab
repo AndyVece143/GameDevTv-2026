@@ -451,7 +451,7 @@ MonoBehaviour:
     okay to not be the best.
   - Sophia feels pressured to live up to her parents, and I let her see that it's
     okay to ask them for help.
-  - Meemaw still enjpys all of life's thrills, even at her age. She reminds me of
+  - Meemaw still enjoys all of life's thrills, even at her age. She reminds me of
     my own grandma, it's a striking resemblance.
   - And Annabelle is happy to have found someone who can do outdoor activities with
     her.
@@ -469,6 +469,9 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: e625aa98a09c0ec49a626d485678953f, type: 3}
   nextDay: 1
   dayUI: {fileID: 0}
+  dayTrans: 1
+  prologue: 0
+  prologueManager: {fileID: 0}
 --- !u!1 &7173677601962066936
 GameObject:
   m_ObjectHideFlags: 0

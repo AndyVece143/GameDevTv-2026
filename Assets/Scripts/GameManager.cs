@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
     public IEnumerator ControlPlayerAgain()
     {
         mainCamera.state = CameraController.State.FollowPlayer;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(3.5f);
         player.StartMoving();
     }
 

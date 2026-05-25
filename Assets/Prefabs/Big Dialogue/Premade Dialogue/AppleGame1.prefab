@@ -583,7 +583,7 @@ MonoBehaviour:
   - Th-thanks! (What does that mean???)
   - So, what do you like to do for fun?
   - Oh, I'm a nature girl. I enjoy any activity that involves the great outdoors.
-  - Hey... I have an idea. Let's go apple catching right now?
+  - Hey... I have an idea. Let's go apple catching right now!
   - Sounds like fun. I've never done it before.
   - It's easy, you just use a wheelbarrow to catch apples. It makes for a good workout.
   - I know the perfect place for this. Let's go!
@@ -632,6 +632,10 @@ MonoBehaviour:
   npcGamer: {fileID: 0}
   letPlayerWalk: 0
   mainCamera: {fileID: 0}
+  yuri: 0
+  yuriGame: {fileID: 0}
+  epilogue: 0
+  epilogueManager: {fileID: 0}
 --- !u!1 &7173677601962066936
 GameObject:
   m_ObjectHideFlags: 0
