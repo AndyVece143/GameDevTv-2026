@@ -79,5 +79,7 @@ public class MinigameTextBox : MonoBehaviour
             textBox.transform.position = Vector3.Lerp(textBox.transform.position, textBoxEndPosition, time / duration);
             yield return null;
         }
+
+        Destroy(gameObject);
     }
 }

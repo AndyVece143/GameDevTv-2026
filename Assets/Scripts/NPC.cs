@@ -121,6 +121,9 @@ public class NPC : MonoBehaviour
             case "Yuri Game":
                 StartCoroutine(manager.YuriGameTime());
                 break;
+            case "Space Game":
+                StartCoroutine(manager.SpaceGameTime());
+                break;
         }
     }
 

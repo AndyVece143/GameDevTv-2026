@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour
     public RoadGame roadGame2;
     public RoadGame roadGame3;
     public YuriGame yuriGame;
+    public SpaceGame spaceGame;
+    public GameObject spaceGameUI;
     public int dayNumber;
     public int teranceFriendship;
     public int meemawFriendship;
@@ -193,6 +195,17 @@ public class GameManager : MonoBehaviour
         music.SwitchSong("Yuri");
     }
 
+    public IEnumerator SpaceGameTime()
+    {
+        fadeToBlack.BecomeTrans();
+        yield return new WaitForSeconds(1.1f);
+        mainCamera.state = CameraController.State.StayStill;
+        mainCamera.transform.position = new Vector3(spaceGame.transform.position.x, spaceGame.transform.position.y, -10);
+        spaceGameUI.SetActive(true);
+        StartCoroutine(spaceGame.StartGame());
+        music.SwitchSong("Gamer");
+    }
+
     public IEnumerator BackToMainGame()
     {
         fadeToBlack.BecomeTrans();
@@ -202,6 +215,7 @@ public class GameManager : MonoBehaviour
         appleGameUI.SetActive(false);
         flowerGameUI.SetActive(false);
         platformerGameUI.SetActive(false);
+        spaceGameUI.SetActive(false);
         mainCamera.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10);
         mainCamera.state = CameraController.State.FollowPlayer;
         music.SwitchSong("Park");
